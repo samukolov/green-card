@@ -1,0 +1,309 @@
+/*=================================================================*/
+/*                      HEADER                              
+/*=================================================================*/
+header.header {
+	padding: 50px 40px 40px;
+	display: inline-block;
+	float: left;
+	position: relative;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 80vh;
+	min-height: 80vh;
+	top: 0;
+	width: 280px;
+	z-index: 1;
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+	@include transition(.3s);
+	&:after {
+		content: '';
+		background: rgb(255,255,255);
+		background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 65%);
+		height: 100%;
+		top: 0;
+		right: 0;
+		position: absolute;
+		width: 1px;
+	}
+	&.open {
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-ms-transform: translateX(0);
+		-o-transform: translateX(0);
+		transform: translateX(0);
+	}
+	.site-logo {
+		text-align: center;
+		width: 100%;
+		.avatar {
+			display: inline-block;
+			margin-bottom: 10px;
+			position: relative;
+			img {
+				border: solid 1px #FFF;
+				border-radius: 50%;
+			}
+			&:after {
+				content: '';
+				display: block;
+				background: #8CF29A;
+				border: solid 3px #FFF;
+				border-radius: 50%;
+				height: 16px;
+				position: absolute;
+				bottom: 3px;
+				right: 3px;
+				width: 16px;
+			}
+			&:hover {
+				.avatar-tooltip {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+		span.avatar-tooltip {
+			position: absolute;
+			right: -110%;
+			bottom: -40px;
+			font-size: 13px;
+			background: #333;
+			max-width: 100px;
+			color: #FFF;
+			border-radius: 5px;
+			line-height: 1.2;
+			padding: 3px 12px;
+			text-align: left;
+			visibility: hidden;
+			opacity: 0;
+			@include transition(.4s);
+			&:before {
+				content: "";
+				width: 0;
+				height: 0;
+				border-top: 4px solid transparent;
+				border-bottom: 4px solid transparent;
+				border-right: 8px solid #333;
+				position: absolute;
+				left: -2px;
+				top: -5px;
+				-webkit-transform: rotate(63deg);
+				-moz-transform: rotate(63deg);
+				-ms-transform: rotate(63deg);
+				-o-transform: rotate(63deg);
+				transform: rotate(63deg);
+				@include transition(.2s);
+			}
+		}
+		.name {
+			font-size: 24px;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		.slogan {
+			font-size: 15px;
+		}
+	}
+	nav {
+		width: 100%;
+	}
+	/* === Main Menu === */
+	.main-menu {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 60px;
+		margin-top: 0;
+	}
+	.main-menu li.openmenu>a {
+		color: #000;
+	}
+	.main-menu li.openmenu .switch {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	.main-menu li {
+		position: relative;
+		list-style: none;
+		left: 0;
+		@include transition(.2s);
+		a {
+			padding: 5px 22px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			&.active {
+				background: #FFF;
+				border-radius: 10px;
+				a {
+					color: $colortextdark;
+				}
+				i {
+					color: $colororange;
+				}
+			}
+			&:hover {
+				color: $colortextdark;
+			}
+		}
+		i {
+			color: $colortext;
+			font-size: 17px;
+			margin-right: 15px;
+			vertical-align: middle;
+		}
+		&:hover {
+			left: 10px;
+		}
+	}
+	.main-menu li .switch {
+		font-size: 30px;
+		display: inline-block;
+		padding: 0 14px;
+		line-height: 1;
+		cursor: pointer;
+		color: #000;
+		position: absolute;
+    	top: 24px;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		-webkit-backface-visibility: hidden;
+	}
+	.main-menu li a {
+		color: $colortext;
+		font-family: $fonthead;
+		font-size: 14px;
+		font-weight: 400;
+		display: inline-block;
+		width: 100%;
+		text-decoration: none;
+		position: relative;
+		&.nav-link {
+		    display: initial;
+		    padding: 0;
+		}
+	}
+	.main-menu li .nav-link.active {
+		color: $colortextdark;
+	}
+	/* === Submenu === */
+
+	.submenu {
+		display: none;
+		padding: 0;
+	}
+	.submenu li a {
+		color: #000;
+		font-size: 18px;
+		font-weight: 700;
+		&:after {
+			height: 3px;
+		}
+		&:hover:after {
+			width: 100%;
+			height: 3px;
+		}
+	}
+	.submenu li a:hover {
+		color: #000;
+	}
+	.footer {
+		margin-top: auto;
+		text-align: center;
+	}
+	.copyright {
+		color: #999;
+		font-size: 15px;
+	}
+}
+
+header.mobile-header {
+	display: none;
+	background: rgb(255 255 255 / 30%);
+    padding: 10px 35px;
+    border-bottom: solid 1px #FFF;
+	width: 100%;
+	z-index: 1;
+	@include transition(.3s);
+	&.open {
+		-webkit-transform: translateX(280px);
+		-moz-transform: translateX(280px);
+		-ms-transform: translateX(280px);
+		-o-transform: translateX(280px);
+		transform: translateX(280px);
+	}
+	.menu-icon {
+		button {
+			background: #FFF;
+			border: 0;
+			border-radius: 5px;
+			cursor: pointer;
+			outline: 0;
+			padding: 0 7px;
+		    height: 38px;
+    		width: 38px;
+			-webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+		}
+		span {
+			display: block;
+			background: $colororange;
+			height: 1px;
+			position: relative;
+			width: 20px;
+			@include transition(.3s);
+			&:before {
+				content: '';
+				display: block;
+				background: $colororange;
+				height: 1px;
+				top: -7px;
+    			position: absolute;
+				width: 25px;
+				@include transition(.3s);
+			}
+			&:after {
+				content: '';
+				display: block;
+				background: $colororange;
+				height: 1px;
+				top: 7px;
+    			position: absolute;
+				width: 15px;
+				@include transition(.3s);
+			}
+			&.open {
+				height: 0;
+				&:before {
+					top: 0;
+					-webkit-transform: rotate(45deg);
+					-moz-transform: rotate(45deg);
+					-ms-transform: rotate(45deg);
+					-o-transform: rotate(45deg);
+					transform: rotate(45deg);
+				}
+				&:after {
+					top: 0;
+					width: 25px;
+					-webkit-transform: rotate(-45deg);
+					-moz-transform: rotate(-45deg);
+					-ms-transform: rotate(-45deg);
+					-o-transform: rotate(-45deg);
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+}

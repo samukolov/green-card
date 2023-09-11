@@ -1,0 +1,716 @@
+/*=================================================================*/
+/*                     BOOTSTRAP ELEMENTS
+/*=================================================================*/
+/* === Progress Bar === */
+.progress {
+    height: 7px;
+    margin-bottom: 0;
+    overflow: hidden;
+    background-color: #FFF;
+    border-radius: 15px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.progress-bar {
+    border-radius: 15px;
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 7px;
+    color: #fff;
+    text-align: center;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+
+/* === Form Control === */
+.form-control {
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: none;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    @include transition(.3s);
+}
+
+.form-control:focus {
+    outline: 0;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.form-control::-webkit-input-placeholder { /* Edge */
+    color: $colortext;
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $colortext;
+}
+
+.form-control::placeholder {
+    color: $colortext;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-group-addon {
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+/* === Alert === */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+
+.alert-dismissable .close, .alert-dismissible .close {
+    position: relative;
+    top: 0;
+    right: 0;
+    color: inherit;
+    background: transparent;
+    padding: 3px 5px 2px;
+    border: solid 1px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+/* === Pagination === */
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    margin: 40px 0 0;
+    li {
+        list-style-type: none;
+        margin: 0 5px;
+    }
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: $colororange;
+    background-color: $colororangesoft;
+    border-color: $colororangesoft;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    color: $colortext;
+    border-radius: 50%;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: rgb(255 255 255 / 50%);
+    border: 0;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    padding: 0;
+    width: 35px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.page-link:hover {
+    z-index: 2;
+    color: $colororange;
+    background-color: $colororangesoft;
+    border-color: $colororangesoft;
+}
+
+.page-item:first-child .page-link {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+/*=================================================================*/
+/*                      THEME ELEMENTS
+/*=================================================================*/
+
+/* === Social Icons === */
+.social-icons {
+    li {
+        margin: 2px;
+        &.list-inline-item:not(:last-child) {
+            margin-right: 0;
+        }
+        a {
+            color: $colortextdark;
+            font-size: 13px;
+            background: #FFF;
+            display: block;
+            border-radius: 5px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            width: 32px;
+            -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+            &:hover {
+                color: $colororange;
+            }
+            &.facebook {
+                color: #3b5998;
+                &:hover {
+                    color: #FFF;
+                    background: #3b5998;
+                }
+            }
+            &.twitter {
+                color: #1da1f2;
+                &:hover {
+                    color: #FFF;
+                    background: #1da1f2;
+                }
+            }
+            &.instagram {
+                color: #f46f30;
+                &:hover {
+                    color: #FFF;
+                    background: #f46f30;
+                }
+            }
+            &.dribbble {
+                color: #ea4c89;
+                &:hover {
+                    color: #FFF;
+                    background: #ea4c89;
+                }
+            }
+            &.behance {
+                color: #000;
+                &:hover {
+                    color: #FFF;
+                    background: #000;
+                }
+            }
+            &.youtube {
+                color: #ff0000;
+                &:hover {
+                    color: #FFF;
+                    background: #ff0000;
+                }
+            }
+            &.pinterest {
+                color: #bd081c;
+                &:hover {
+                    color: #FFF;
+                    background: #bd081c;
+                }
+            }
+            &.linkedin {
+                color: #0a66c2;
+                &:hover {
+                    color: #FFF;
+                    background: #0a66c2;
+                }
+            }
+            &.snapchat {
+                color: #fffc00;
+                &:hover {
+                    color: #FFF;
+                    background: #fffc00;
+                }
+            }
+            &.whatsapp {
+                color: #25d366;
+                &:hover {
+                    color: #FFF;
+                    background: #25d366;
+                }
+            }
+            &.tumblr {
+                color: #35465d;
+                &:hover {
+                    color: #FFF;
+                    background: #35465d;
+                }
+            }
+            &.reddit {
+                color: #ff4500;
+                &:hover {
+                    color: #FFF;
+                    background: #ff4500;
+                }
+            }
+            &.tiktok {
+                color: #010101;
+                &:hover {
+                    color: #FFF;
+                    background: #010101;
+                }
+            }
+            &.yelp {
+                color: #d32323;
+                &:hover {
+                    color: #FFF;
+                    background: #d32323;
+                }
+            }
+            &.mastodon {
+                color: #2b90d9;
+                &:hover {
+                    color: #FFF;
+                    background: #2b90d9;
+                }
+            }
+            &.spotify {
+                color: #1ed760;
+                &:hover {
+                    color: #FFF;
+                    background: #1ed760;
+                }
+            }
+            &.apple {
+                color: #a6b1b7;
+                &:hover {
+                    color: #FFF;
+                    background: #a6b1b7;
+                }
+            }
+            &.amazon {
+                color: #ff9900;
+                &:hover {
+                    color: #FFF;
+                    background: #ff9900;
+                }
+            }
+            &.alexa {
+                color: #00a7ce;
+                &:hover {
+                    color: #FFF;
+                    background: #00a7ce;
+                }
+            }
+            &.foursquare {
+                color: #f94877;
+                &:hover {
+                    color: #FFF;
+                    background: #f94877;
+                }
+            }
+            &.swarm {
+                color: #ffa633;
+                &:hover {
+                    color: #FFF;
+                    background: #ffa633;
+                }
+            }
+            &.medium {
+                color: #02b875;
+                &:hover {
+                    color: #FFF;
+                    background: #02b875;
+                }
+            }
+            &.vimeo {
+                color: #1ab7ea;
+                &:hover {
+                    color: #FFF;
+                    background: #1ab7ea;
+                }
+            }
+            &.skype {
+                color: #00aff0;
+                &:hover {
+                    color: #FFF;
+                    background: #00aff0;
+                }
+            }
+            &.android {
+                color: #a4c639;
+                &:hover {
+                    color: #FFF;
+                    background: #a4c639;
+                }
+            }
+            &.quora {
+                color: #aa2200;
+                &:hover {
+                    color: #FFF;
+                    background: #aa2200;
+                }
+            }
+            &.slack {
+                color: #4a154b;
+                &:hover {
+                    color: #FFF;
+                    background: #4a154b;
+                }
+            }
+            &.stumbleupon {
+                color: #e94826;
+                &:hover {
+                    color: #FFF;
+                    background: #e94826;
+                }
+            }
+            &.flickr {
+                color: #f40083;
+                &:hover {
+                    color: #FFF;
+                    background: #f40083;
+                }
+            }
+            &.yahoo {
+                color: #6001d2;
+                &:hover {
+                    color: #FFF;
+                    background: #6001d2;
+                }
+            }
+            &.twitch {
+                color: #9146ff;
+                &:hover {
+                    color: #FFF;
+                    background: #9146ff;
+                }
+            }
+            &.soundcloud {
+                color: #ff5500;
+                &:hover {
+                    color: #FFF;
+                    background: #ff5500;
+                }
+            }
+            &.deviantart {
+                color: #05cc47;
+                &:hover {
+                    color: #FFF;
+                    background: #05cc47;
+                }
+            }
+            &.pocket {
+                color: #ee4056;
+                &:hover {
+                    color: #FFF;
+                    background: #ee4056;
+                }
+            }
+            &.vk {
+                color: #4a76a8;
+                &:hover {
+                    color: #FFF;
+                    background: #4a76a8;
+                }
+            }
+            &.steam {
+                color: #171A21;
+                &:hover {
+                    color: #FFF;
+                    background: #171A21;
+                }
+            }
+            &.discord {
+                color: #7289da;
+                &:hover {
+                    color: #FFF;
+                    background: #7289da;
+                }
+            }
+            &.telegram {
+                color: #0088cc;
+                &:hover {
+                    color: #FFF;
+                    background: #0088cc;
+                }
+            }
+            &.googleplus {
+                color: #db4437;
+                &:hover {
+                    color: #FFF;
+                    background: #db4437;
+                }
+            }
+        }
+    }
+}
+
+#cursor-outer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    z-index: 10000;
+}
+  
+#ball {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    border: 1px solid #999;
+    background: transparent;
+    border-radius: 100%;
+    pointer-events: none;
+    opacity: 1;
+    box-sizing: border-box;
+    &.plus {
+        text-align: center;
+        height: 24px;
+        line-height: 20px;
+        width: 24px;
+        &:before {
+            content: '\e61a';
+            font-family: 'themify';
+            font-size: 8px;
+            color: #FFF;
+        }
+    }
+    &.link {
+        text-align: center;
+        height: 24px;
+        line-height: 20px;
+        width: 24px;
+        &:before {
+            content: '\e62d';
+            font-family: 'themify';
+            font-size: 8px;
+            color: #FFF;
+        }
+    }
+    &.empty {
+        width: 0;
+        height: 0;
+        border: 0;
+    }
+}
+
+/* === Helper === */
+.rounded {
+    border-radius: 10px !important;
+}
+
+.bg-white {
+    background: rgba(255, 255, 255, 0.40) !important;
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.padding-15 {
+    padding: 15px;
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.padding-25 {
+    padding: 25px;
+}
+
+.padding-30 {
+    padding: 30px;
+}
+
+.text-dark {
+    color: $colortextdark;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 0;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// ====== Magnific Popup ======
+.mfp-zoom-in {
+  
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.2s ease-in-out; 
+    transform: scale(0.8); 
+  }
+  
+  &.mfp-bg {
+    opacity: 0;
+	transition: all 0.3s ease-out;
+  }
+  
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1); 
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+  
+  /* animate out */
+  &.mfp-removing {
+    
+    .mfp-with-anim {
+      transform: scale(0.8); 
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+    
+  }
+  
+}
+
+
+/* Styles for dialog window */
+.white-popup {
+    background: white;
+    border-radius: 10px;
+    padding: 20px 30px;
+    text-align: left;
+    max-width: 600px;
+    margin: 40px auto;
+    position: relative;
+    .title {
+        margin: 20px 0 5px;
+    }
+    span.term {
+        font-size: 15px;
+        color: #949494;
+        margin-bottom: 10px;
+        display: block;
+    }
+  }
+
+
+  /**
+   * Fade-zoom animation for first dialog
+   */
+  
+  /* start state */
+  .my-mfp-zoom-in .zoom-anim-dialog {
+    opacity: 0;
+
+    -webkit-transition: all 0.2s ease-in-out; 
+    -moz-transition: all 0.2s ease-in-out; 
+    -o-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out; 
+
+
+
+    -webkit-transform: scale(0.8); 
+    -moz-transform: scale(0.8); 
+    -ms-transform: scale(0.8); 
+    -o-transform: scale(0.8); 
+    transform: scale(0.8); 
+  }
+
+  /* animate in */
+  .my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+    opacity: 1;
+
+    -webkit-transform: scale(1); 
+    -moz-transform: scale(1); 
+    -ms-transform: scale(1); 
+    -o-transform: scale(1); 
+    transform: scale(1); 
+  }
+
+  /* animate out */
+  .my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+    -webkit-transform: scale(0.8); 
+    -moz-transform: scale(0.8); 
+    -ms-transform: scale(0.8); 
+    -o-transform: scale(0.8); 
+    transform: scale(0.8); 
+
+    opacity: 0;
+  }
+
+  /* Dark overlay, start state */
+  .my-mfp-zoom-in.mfp-bg {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out; 
+    -moz-transition: opacity 0.3s ease-out; 
+    -o-transition: opacity 0.3s ease-out; 
+    transition: opacity 0.3s ease-out;
+  }
+  /* animate in */
+  .my-mfp-zoom-in.mfp-ready.mfp-bg {
+    opacity: 0.4;
+  }
+
+  .mfp-bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1042;
+    overflow: hidden;
+    position: fixed;
+    background: #0b0b0b;
+    opacity: 0.2;
+    cursor: zoom-out;
+}
+
+  /* animate out */
+  .my-mfp-zoom-in.mfp-removing.mfp-bg {
+    opacity: 0;
+  }
+
+  .mfp-close {
+      font-size: 40px;
+      opacity: 1;
+      &:hover {
+          opacity: 0.75;
+      }
+  }
+
+.mfp-arrow-right:before {
+    border-left: 0;
+}
+
+.mfp-arrow-left:before {
+    border-right: 0;
+}
+
+.mfp-figure:after {
+    box-shadow: none;
+    background: transparent;
+}

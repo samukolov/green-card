@@ -1,0 +1,12 @@
+$fonthead: 'Poppins', sans-serif;
+$fontstack: 'Jost', sans-serif;
+$colortextdark: #33303E;
+$colortext: #716e79;
+$colororange: #FF6525;
+$colororangesoft: #FFD9C9;
+
+@mixin transition($second) {
+  -webkit-transition: all $second ease-in-out;
+    -moz-transition: all $second ease-in-out;
+        transition: all $second ease-in-out;
+}
